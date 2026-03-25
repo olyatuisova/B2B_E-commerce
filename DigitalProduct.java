@@ -13,9 +13,9 @@ public class DigitalProduct extends Product {
   @Override
   public double calculateFinalPrice(Customer customer) {
     return switch (licenseType) {
-      case "team" -> getBasePrice() * 0.9;
+      case "team"       -> getBasePrice() * 0.9;
       case "enterprise" -> getBasePrice() * 0.7;
-      default -> getBasePrice();
+      default           -> getBasePrice();
     };
   }
 
@@ -23,9 +23,7 @@ public class DigitalProduct extends Product {
   public String getProductType() { return "Digital product"; }
 
   @Override
-  public double applyDiscount(double price) {
-    return price * 0.95; // 5% знижки
-  }
+  public double applyDiscount(double price) { return price * 0.95; }
 
   @Override
   public String getDiscountType() { return "License discount"; }

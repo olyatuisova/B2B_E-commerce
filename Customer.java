@@ -1,7 +1,7 @@
-
 import java.util.ArrayList;
 import java.util.List;
-public class Customer extends User{
+
+public class Customer extends User {
 
     private String companyName;
     private String edrpou;
@@ -20,30 +20,25 @@ public class Customer extends User{
     }
 
     @Override
-    public String getRole() {
-        return "CUSTOMER";
-    }
+    public String getRole() { return "CUSTOMER"; }
 
     @Override
     public void showDashboard() {
-        System.out.println("Buyer's panel: " + companyName);
-        System.out.println("Credit limit: " + creditLimit + " uah") ;
-        System.out.println("Count of orders:  " + orderHistory.size());
+        System.out.println("Buyers panel: " + companyName);
+        System.out.println("Credit limit: " + creditLimit + " uah");
+        System.out.println("Count of orders: " + orderHistory.size());
     }
-    public void addToCart(Product product, int quantity){
+
+    public void addToCart(Product product, int quantity) {
         cart.addItem(product, quantity);
     }
 
-    public double getCreditLimit(){
-        return creditLimit;
+    public void printCart() {
+        cart.printCart(this);
     }
+    public Cart getCart() { return cart; }
 
-    public void setCreditLimit(double limit){
-        this.creditLimit = limit;
-    }
-
-    public String getCompanyName(){
-        return companyName;
-    }
-
+    public double getCreditLimit() { return creditLimit; }
+    public void setCreditLimit(double limit) { this.creditLimit = limit; }
+    public String getCompanyName() { return companyName; }
 }

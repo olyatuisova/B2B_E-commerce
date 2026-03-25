@@ -2,19 +2,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Admin extends User {
+
     private String department;
     private List<String> permissions;
 
-    public Admin(int id, String name, String email, String password, String department) {
+    public Admin(int id, String name, String email,
+                 String password, String department) {
         super(id, name, email, password);
         this.department = department;
         this.permissions = new ArrayList<>();
     }
 
     @Override
-    public String getRole() {
-        return "ADMIN";
-    }
+    public String getRole() { return "ADMIN"; }
 
     @Override
     public void showDashboard() {

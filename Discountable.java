@@ -1,4 +1,5 @@
-public interface Discountable{
+
+public interface Discountable {
     double applyDiscount(double price);
     String getDiscountType();
 }
