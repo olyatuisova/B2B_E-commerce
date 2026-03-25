@@ -16,6 +16,8 @@ public abstract class Payment implements Payable {
   @Override
   public String getPaymentStatus() { return status; }
 
+  public abstract boolean processPayment(double amount);
+
   public final void execute() {
     System.out.println("Start of payment: " + amount + " uah");
     if (processPayment(amount)) {

@@ -97,5 +97,26 @@ public class Main {
 
         order.setStatus("SHIPPED");
         order.setStatus("DELIVERED");
+        MyLinkedList<Integer> intList = new MyLinkedList<>();
+        intList.add(5);
+        intList.add(2);
+        intList.add(9);
+        intList.sort();
+        intList.print();
+
+        MyLinkedList<String> strList = new MyLinkedList<>();
+        strList.add("banana");
+        strList.add("apple");
+        strList.add("cherry");
+        strList.sort();
+        strList.print();
+
+        MyLinkedList<MyData> customList = new MyLinkedList<>();
+        customList.add(new MyData(10));
+        customList.add(new MyData(3));
+        customList.add(new MyData(7));
+        customList.sort();
+        customList.print();
     }
+
 }

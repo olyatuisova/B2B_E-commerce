@@ -13,7 +13,6 @@ public class InvoicePayment extends Payment {
     public boolean processPayment(double amount) {
         System.out.println("Invoice " + invoiceNumber);
         System.out.println("Payment within: " + paymentTermDays + " days");
-
         return true;
     }
 
